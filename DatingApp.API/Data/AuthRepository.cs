@@ -21,8 +21,8 @@ namespace DatingApp.API.Data
       if (user == null)
         return null;
       
-      // if (!VerifyPasswordHash(password, user.PasswordHash, user.PasswordSalt))
-      //   return null;
+      if (!VerifyPasswordHash(password, user.PasswordHash, user.PasswordSalt))
+        return null;
       
       Console.WriteLine(user);
       return user;
@@ -63,8 +63,8 @@ namespace DatingApp.API.Data
       using (
         var hmac = new System.Security.Cryptography.HMACSHA512())
       {
-          passwordHash = hmac.Key;
-          passwordSalt = hmac.ComputeHash(System.Text.Encoding.UTF8.GetBytes(password));
+          passwordSalt = hmac.Key;
+          passwordHash = hmac.ComputeHash(System.Text.Encoding.UTF8.GetBytes(password));
       }
     }
 

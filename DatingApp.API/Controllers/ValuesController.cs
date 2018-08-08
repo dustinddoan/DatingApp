@@ -8,7 +8,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 
 namespace DatingApp.API.Controllers
-{
+{ 
   [Authorize]
   [Route("api/[controller]")]
   [ApiController]
