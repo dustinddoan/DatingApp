@@ -12,7 +12,7 @@
     <div class="row">
       <div class="col-sm-4">
         <div class="card">
-          <img class="card-img-top img-thumbnail" src="{{user.photoUrl}}" alt="{{user.knownAs}}">
+          <img class="card-img-top img-thumbnail" src="{{photoUrl}}" alt="{{user.knownAs}}">
           <div class="card-body">
             <div>
                 <strong>Location:</strong>
@@ -46,7 +46,7 @@
                 <h4>Looking For</h4>
                 <textarea name="lookingFor" rows="6" class="form-control" [(ngModel)]="user.lookingFor"></textarea>
                 <h4>Interest</h4>
-                <textarea name="interest" rows="6" class="form-control" [(ngModel)]="user.interests"></textarea>
+                <textarea name="interests" rows="6" class="form-control" [(ngModel)]="user.interests"></textarea>
                 <h4>Location Details:</h4>
                 <div class="form-inline">
                   <label for="city">City</label>
@@ -57,7 +57,7 @@
               </form>
             </tab>
             <tab heading="Edit Photos">
-              <p>edit photos</p>
+              <app-photo-editor [photos]="user.photos" (getMemberPhotoChange)="updateMainPhoto($event)"></app-photo-editor>
             </tab>
           </tabset>
         </div>
