@@ -57,6 +57,15 @@ export class PhotoEditorComponent implements OnInit {
         };
 
         this.photos.push(photo);
+
+        // if this is the first upload, API assign it to main
+        // then use the same implementation as setMainPhoto to
+        // update and sync the main photo
+        if (photo.isMain) {
+          this.authService.changeMemberPhoto(photo.url);
+          this.authService.currentUser.photoUrl = photo.url;
+          localStorage.setItem('user', JSON.stringify(this.authService.currentUser));
+        }
       }
     };
   }
