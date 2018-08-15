@@ -3,7 +3,7 @@ import { User } from '../../_models/user';
 import { UserService } from '../../_services/user.service';
 import { AlertifyService } from '../../_services/alertify.service';
 import { ActivatedRoute } from '@angular/router';
-import { Pagination, PaginatedResult } from './../../_models/pagination';
+import { Pagination, PaginatedResult } from '../../_models/pagination';
 
 @Component({
   selector: 'app-member-list',

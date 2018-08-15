@@ -1,10 +1,10 @@
 import { Component, OnInit, Output, EventEmitter } from '@angular/core';
-import { FormGroup, FormControl, Validators, FormBuilder } from '../../../node_modules/@angular/forms';
+import { FormGroup, FormControl, Validators, FormBuilder } from '@angular/forms';
 import { AlertifyService } from '../_services/alertify.service';
 import { AuthService } from '../_services/auth.service';
-import { BsDatepickerConfig } from '../../../node_modules/ngx-bootstrap';
+import { BsDatepickerConfig } from 'ngx-bootstrap';
 import { User } from '../_models/user';
-import { Router } from '../../../node_modules/@angular/router';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-register',
