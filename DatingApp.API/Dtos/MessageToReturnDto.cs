@@ -16,5 +16,9 @@ namespace DatingApp.API.Dtos
         public bool IsRead { get; set; }
         public DateTime? DateRead { get; set; }
         public DateTime DateSent { get; set; }
+        public MessageToReturnDto()
+        {
+            DateSent = DateTime.Now;
+        }
     }
 }
